@@ -1,0 +1,51 @@
+<style>
+.gallery-icon.landscape a img {
+    height: 300px;
+    width: 600px;
+    display: flex;
+  object-fit: cover;
+}
+.gallery-item {
+    position: relative;
+}
+.wp-caption-text.gallery-caption{
+    position: absolute;
+    bottom: 10px;
+    
+}
+.gallery-item .wp-caption-text.gallery-caption {
+  display: none; /* Hide initially */
+}
+
+.gallery-item:hover .wp-caption-text.gallery-caption {
+  display: block; 
+}
+
+.gallery-icon.landscape {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+}
+
+.gallery-icon.landscape::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+  pointer-events: none; /* Prevent the overlay from blocking interactions with the image */
+}
+
+.gallery-icon.landscape:hover::before,
+.wp-caption-text.gallery-caption:hover ~ .gallery-icon.landscape::before {
+  opacity: 1;
+}
+
+figure.gallery-item:hover .gallery-icon.landscape::before {
+  opacity: 0.7; /* Adjust the opacity value as needed */
+  /* You can also change the background-color here */
+}
+
+</style>
