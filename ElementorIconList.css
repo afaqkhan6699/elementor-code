@@ -1,0 +1,9 @@
+#Elementor icon list from horizontal to vertical on mobile
+@media screen and (max-width: 760px) {
+    ul.elementor-icon-list-items.elementor-inline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
