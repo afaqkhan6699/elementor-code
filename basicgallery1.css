@@ -1,4 +1,4 @@
-<style>
+
 .gallery-icon.landscape a img {
     height: 300px;
     width: 600px;
@@ -48,4 +48,3 @@ figure.gallery-item:hover .gallery-icon.landscape::before {
   /* You can also change the background-color here */
 }
 
-</style>
